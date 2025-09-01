@@ -1,0 +1,33 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& vect, int target) {
+       vector<int>temp(2);
+       map<int,int>m;
+       for(int i=0;i<vect.size();i++){
+
+        int compliment=target-vect[i];
+        if(m.count(compliment)){
+
+            temp[0]=i;
+            temp[1]=m[compliment];
+
+        }
+        else {
+
+           pair<int,int>p=make_pair(vect[i],i);
+           m.insert(p);
+        
+
+        }
+       }
+       return temp;
+     
+       
+        
+        
+
+        
+        
+        
+    }
+};
